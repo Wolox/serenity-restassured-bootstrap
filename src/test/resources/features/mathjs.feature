@@ -3,18 +3,17 @@ Feature: MathJS
   I want to test the MathJS webservice
   To realize the serenity-resassured-bootstrap
 
-  Scenario Outline: GET Request - <scenario>
-    When I request evaluation of <expression>
-    Then I should get <expected_result>
-    And I should get status <code>
+  Scenario Outline: GET Request
+    When the user wants to evaluate the <expression> in MathJS
+    Then he should see the <expected_result> in the browser
 
     Examples:
-    | scenario | expression | expected_result | code |
-    | successful | 2+3 | 5 | 200 |
-    | successful | 2*(7-3) | 8 | 200 |
-    | failed | 2+3*sqrt(4) | 1 | 400 |
+    | expression | expected_result |
+    | 2+3 | 5 |
+    | 2*(7-3) | 8 |
+
 
   Scenario: POST Request
-    When I request evaluation with POST request of sin(45 deg)^2
-    Then I verify the correct schema
+    When the user wants to evaluate sin(45 deg)^2 of alternative way in MathJS
+    Then he should see the correct structure in the answer
 

@@ -8,14 +8,14 @@ import static net.serenitybdd.screenplay.actors.OnStage.theActor;
 
 public class MathJSStepDefinitions {
 
-    @When("^I request evaluation of (.*)$")
+    @When("^the user wants to evaluate the (.*) in MathJS$")
     public void iRequestEvaluationOf(String expression) {
         theActor("Milo 2.0").attemptsTo(
                 EvaluateWithGETRequest.the(expression)
         );
     }
 
-    @When("I request evaluation with POST request of (.*)$")
+    @When("the user wants to evaluate (.*) of alternative way in MathJS$")
     public void iRequestEvaluationWithPOSTRequestOfSinDeg(String expression) {
         theActor("juanma.z").attemptsTo(
                 EvaluateWithPOSTRequest.the(expression)

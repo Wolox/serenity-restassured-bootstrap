@@ -50,6 +50,7 @@ jobs:
           /.gradle
           
   test:
+    needs: build
     runs-on: ubuntu-latest
     
     steps:

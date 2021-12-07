@@ -46,7 +46,8 @@ jobs:
         arguments: clean test aggregate
     - name: Publish test report
       if: always()
-      uses: peaceiris/actions-gh-pages@v3
+      uses: JamesIves/github-pages-deploy-action@4.1.4
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./target/site/serenity
+        BRANCH: gh-pages
+        FOLDER: ./target/site/serenity
+        CLEAN: true

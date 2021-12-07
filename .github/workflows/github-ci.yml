@@ -43,8 +43,8 @@ jobs:
       with:
         name: serenity-restassured-bootstrap-artifact
         path: |
-          /build
-          /.gradle
+          /github/workspace/build
+          /github/workspace/.gradle
           
   test:
     needs: build

@@ -38,37 +38,15 @@ jobs:
           -Dsonar.tests=test/java
           -Dsonar.java.binaries=/github/workspace/build/classes
           -Dsonar.java.libraries=/github/workspace/build/libs
-    - name: Upload build artifact
-      uses: actions/upload-artifact@v2
+    - name: Test execution
+      uses: gradle/gradle-build-action@v2.0.1
+      env:
+        BASE_URL: ${{ secrets.BASE_URL }}
       with:
-        name: serenity-restassured-bootstrap-artifact
-        path: |
-          /github/workspace/build
-          /github/workspace/.gradle
-          
-  test:
-    needs: build
-    runs-on: ubuntu-latest
-    
-    steps:
-      - name: Download build artifact
-        uses: actions/download-artifact@v2
-        with:
-          name: serenity-restassured-bootstrap-artifact
-      - name: Set up JDK 8
-        uses: actions/setup-java@v2
-        with:
-          java-version: '8'
-          distribution: 'adopt'
-      - name: Test execution
-        uses: gradle/gradle-build-action@v2.0.1
-        env:
-          BASE_URL: ${{ secrets.BASE_URL }}
-        with:
-          arguments: clean test aggregate
-      - name: Publish test report
-        if: ${{ github.ref == 'refs/heads/main' }}
-        uses: peaceiris/actions-gh-pages@v3
-        with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./target/site/serenity
+        arguments: clean test aggregate
+    - name: Publish test report
+      if: ${{ github.ref == 'refs/heads/main' }}
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./target/site/serenity

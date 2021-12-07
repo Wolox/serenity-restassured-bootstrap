@@ -6,6 +6,6 @@ public class EnvironmentVariables {
 
     private static net.thucydides.core.util.EnvironmentVariables environmentVariables = SystemEnvironmentVariables.createEnvironmentVariables();
 
-    public static final String URL_BASE = environmentVariables.getProperty("base.url");
+    public static final String URL_BASE = environmentVariables.getProperty("BASE_URL");
 
 }

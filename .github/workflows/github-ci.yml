@@ -36,8 +36,8 @@ jobs:
           -Dsonar.projectName=Serenity-RestAssured-Bootstrap
           -Dsonar.sources=main/java
           -Dsonar.tests=test/java
-          -Dsonar.java.binaries=build/classes
-          -Dsonar.java.libraries=build/libs
+          -Dsonar.java.binaries=/github/workspace/build/classes
+          -Dsonar.java.libraries=/github/workspace/build/libs
     - name: SonarQube Quality Gate check
       uses: sonarsource/sonarqube-quality-gate-action@master
       timeout-minutes: 5

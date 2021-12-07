@@ -40,8 +40,6 @@ jobs:
           -Dsonar.java.libraries=/github/workspace/build/libs
     - name: Test execution
       uses: gradle/gradle-build-action@v2.0.1
-      env:
-        BASE_URL: ${{ secrets.BASE_URL }}
       with:
         arguments: -DBASE_URL=${{ secrets.BASE_URL }} clean test aggregate
     - name: Publish test report

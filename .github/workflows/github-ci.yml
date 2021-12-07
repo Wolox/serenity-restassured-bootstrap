@@ -34,7 +34,7 @@ jobs:
         args: >
           -Dsonar.projectKey=serenity-restassured-bootstrap
           -Dsonar.projectName=Serenity-RestAssured-Bootstrap
-          -Dsonar.sources=/main/java
+          -Dsonar.sources=main/java
           -Dsonar.tests=test/java
     - name: SonarQube Quality Gate check
       uses: sonarsource/sonarqube-quality-gate-action@master

@@ -38,11 +38,6 @@ jobs:
           -Dsonar.tests=test/java
           -Dsonar.java.binaries=/github/workspace/build/classes
           -Dsonar.java.libraries=/github/workspace/build/libs
-    - name: SonarQube Quality Gate check
-      uses: sonarsource/sonarqube-quality-gate-action@master
-      timeout-minutes: 5
-      env:
-       SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
     - name: Upload build artifact
       uses: actions/upload-artifact@v2
       with:

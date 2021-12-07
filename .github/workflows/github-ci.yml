@@ -33,7 +33,7 @@ jobs:
         projectBaseDir: /src
         args: >
           -Dsonar.projectKey=serenity-restassured-bootstrap
-          -Dsonar.projectName=Serenity-RestAssured Bootstrap
+          -Dsonar.projectName=Serenity-RestAssured-Bootstrap
           -Dsonar.sources=/main/java
           -Dsonar.tests=/test/java
     - name: SonarQube Quality Gate check
@@ -63,9 +63,14 @@ jobs:
         with:
           java-version: '8'
           distribution: 'adopt'
-      - name: Build with Gradle
+      - name: Test execution
         uses: gradle/gradle-build-action@v2.0.1
         env:
           BASE_URL: ${{ secrets.BASE_URL }}
         with:
           arguments: clean test aggregate
+      - name: Publish test report
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./target/site/serenity

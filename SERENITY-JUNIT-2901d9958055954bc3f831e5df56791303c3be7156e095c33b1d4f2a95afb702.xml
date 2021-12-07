@@ -1,1 +1,1 @@
-<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="MathJS" skipped="0" tests="3" time="4.4" timestamp="2021-12-07 10:49:15"><testcase name="GET Request"/><testcase name="POST Request"/></testsuite>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?><testsuite errors="0" failures="0" name="MathJS" skipped="0" tests="3" time="4.35" timestamp="2021-12-07 10:52:09"><testcase name="GET Request"/><testcase name="POST Request"/></testsuite>

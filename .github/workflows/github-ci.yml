@@ -25,14 +25,11 @@ jobs:
       with:
         arguments: clean build -x test
     - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
       run: gradle sonarqube
-      with:
-        projectBaseDir: ./src
-        args: >
+          -DprojectBaseDir=./src
           -Dsonar.projectKey=serenity-restassured-bootstrap
           -Dsonar.projectName=Serenity-RestAssured-Bootstrap
           -Dsonar.sources=main/java

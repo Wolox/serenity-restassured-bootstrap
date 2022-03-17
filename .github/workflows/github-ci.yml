@@ -31,11 +31,6 @@ jobs:
       run: gradle sonarqube --info
           -DprojectBaseDir=./src
           -Dsonar.projectKey=serenity-restassured-bootstrap
-          -Dsonar.projectName=Serenity-RestAssured-Bootstrap
-          -Dsonar.sources=main/java
-          -Dsonar.tests=test/java
-          -Dsonar.java.binaries=/github/workspace/build/classes
-          -Dsonar.java.libraries=/github/workspace/build/libs
     - name: Test execution
       uses: gradle/gradle-build-action@v2.0.1
       with:

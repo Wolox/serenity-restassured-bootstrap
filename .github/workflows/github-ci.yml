@@ -28,7 +28,7 @@ jobs:
       env:
         SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      run: gradle sonarqube
+      run: gradle sonarqube --info
           -DprojectBaseDir=./src
           -Dsonar.projectKey=serenity-restassured-bootstrap
           -Dsonar.projectName=Serenity-RestAssured-Bootstrap

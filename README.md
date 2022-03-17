@@ -25,8 +25,8 @@ To run the automated tests, run the following command in the Terminal: `./gradle
 6. Create a new pull request
 
 ## Information sources
-[Serenity BDD book.](https://github.com/serenity-bdd)
-<br>[Serenity BDD github repository.](https://github.com/serenity-bdd)
-<br>[Serenity Properties and Configuration.](https://serenity-bdd.github.io/theserenitybook/latest/serenity-system-properties.html)
+* [Serenity BDD book.](https://github.com/serenity-bdd)
+* [Serenity BDD github repository.](https://github.com/serenity-bdd)
+* [Serenity Properties and Configuration.](https://serenity-bdd.github.io/theserenitybook/latest/serenity-system-properties.html)
 
 

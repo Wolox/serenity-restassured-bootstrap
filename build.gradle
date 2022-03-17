@@ -4,7 +4,7 @@ version '1.0-SNAPSHOT'
 apply plugin: 'java'
 apply plugin: 'idea'
 apply plugin: 'net.serenity-bdd.aggregator'
-apply plugin: 'org.sonarqube'
+apply plugin: "org.sonarqube"
 
 sourceCompatibility = 1.8
 
@@ -35,6 +35,7 @@ sonarqube {
         property "sonar.projectKey", "serenity-restassured-bootstrap"
         property "sonar.organization", "wolox"
         property "sonar.host.url", "https://sonarcloud.io"
+        property "sonar.scm.disabled", true
     }
 }
 

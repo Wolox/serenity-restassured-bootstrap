@@ -16,7 +16,7 @@ It is necessary to have installed the Java JDK and Gradle, as well as the enviro
 ## Test execution 🚀
 To run the automated tests, run the following command in the Terminal: `./gradlew clean test --tests [runner] -Dcucumber.options="--tags @[tag]" aggregate --info`
 
-## Contributing ✒️
+### Contributing ✒️
 1. Clone the repository
 2. Create your feature branch (`git checkout -b my-new-feature`)
 3. Run the tests or make changes
@@ -24,7 +24,10 @@ To run the automated tests, run the following command in the Terminal: `./gradle
 5. Push the branch (`git push origin my-new-feature`)
 6. Create a new pull request
 
-## Information sources
+### Static code analysis 🔍
+* [SonarCloud Dashboard](https://sonarcloud.io/summary/new_code?id=serenity-restassured-bootstrap)
+
+### Information sources
 * [Serenity BDD book.](https://github.com/serenity-bdd)
 * [Serenity BDD github repository.](https://github.com/serenity-bdd)
 * [Serenity Properties and Configuration.](https://serenity-bdd.github.io/theserenitybook/latest/serenity-system-properties.html)

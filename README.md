@@ -27,7 +27,7 @@ To run the automated tests, run the following command in the Terminal: `./gradle
 ### Static code analysis 🔍
 * [SonarCloud Dashboard](https://sonarcloud.io/summary/new_code?id=serenity-restassured-bootstrap)
 
-### Information sources
+### Information sources 💡
 * [Serenity BDD book.](https://github.com/serenity-bdd)
 * [Serenity BDD github repository.](https://github.com/serenity-bdd)
 * [Serenity Properties and Configuration.](https://serenity-bdd.github.io/theserenitybook/latest/serenity-system-properties.html)
